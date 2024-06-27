@@ -1,27 +1,23 @@
 [
   {
     "id": 1,
-    "projectlink": "https://www.youtube.com/embed/xidxWceG-wA",
-    "codelink": "https://github.com/poojagarva28/portfolio"
+    "image": "/src/assets/img/evisit.jpg",
+    "codelink": "https://github.com/Meghhanaa/E-VISITORSHUB.git"
   },
   {
     "id": 2,
-    "projectlink": "https://www.youtube.com/embed/aWEYQRIfMJ4",
-    "codelink": "https://github.com/poojagarva28/todo-javascript"
+    "image": "../src/assets/img/quiz.png",
+    "codelink": "https://github.com/Meghhanaa/Quizlet.git"
   },
   {
     "id": 3,
-    "projectlink": "https://www.youtube.com/embed/Li1-9zinwEk",
-    "codelink": "https://github.com/poojagarva28/Video-Player-JS"
+    "image": "../src/assets/img/quiz.png",
+    "codelink": "https://github.com/Meghhanaa/BHOPAL_PROJECT.git"
   },
   {
     "id": 4,
-    "projectlink": "https://www.youtube.com/embed/shhjrGmmcLM",
-    "codelink": "https://github.com/poojagarva28/notes"
-  },
-  {
-    "id": 5,
-    "projectlink": "https://www.youtube.com/embed/bLatG_x6gsk?si=Gf4iAmBpBQG-tfIg",
-    "codelink": "https://github.com/poojagarva28/emoji-world"
+    "image": "../src/assets/img/quiz.png",
+    "codelink": "https://github.com/Meghhanaa/RUBIKS.git"
   }
 ]
+

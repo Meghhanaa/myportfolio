@@ -1,13 +1,104 @@
 /* #educationn {height: 100vh;display: flex;justify-content: center;align-items: center;  min-height: 100vh;} */
 #educationn {
   padding-top: 5%;
+  height: 100vh;
+  overflow: scroll;
+  background: url("../assets/img/wall-sleek.webp") no-repeat center center fixed, 
+              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  background-size: cover, 100px 100px;
+  animation: moveSlant 20s linear infinite;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
+@keyframes moveSlant {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.megh-name{
+  color: #af0236;
+  text-shadow: 2px 2px 4px #000, /* White shadow */
+               -2px -2px 4px #ccc;
+}
+
+.edu{
+  color: #fff;
+  border: 2px dashed #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1000px; */
+  width: 75vw;
+  min-height: 60vh;
+  margin-top: 2vh;
+  margin-left: 00px;
+  /* margin-right: 20px; */
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.edu::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+.edu::after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  right: -12.5px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(90deg);
+    transform: scale(0.7);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  #edu-megh{
+    padding: 0px 30px;
+  }
+}
+
+
 #educationn h5 {
   margin-bottom: 10px;
   line-height: 22px;
 }
-#educationn .educationnblock {
-  border-bottom: 1px solid #000;
+
+.educationblock {
+  border-bottom: 1px solid #fff;
   margin-bottom: 10px;
   padding: 20px 0px;
 }
@@ -37,6 +128,21 @@
   color: #fff;
   border-radius: 0px;
 }
+@media only screen and (max-width: 600px) {
+  #educationn{
+    height: 150vh;
+  }
+  #edu {
+    padding: 50px 20px;
+    width: 20px;
+  }
+  .edu-megh {
+    min-height: auto;
+    min-width: auto;
+  }
+}
+
+
 /* #educationn .nav-tabs .nav-link.active::after{content: '';
     display: block;
     position: absolute;
@@ -56,9 +162,53 @@
 
 @media (max-width: 767px) {
   #educationn {
-    padding-top: 120px;
+    padding-top: 100px;
+    height: 150vh;
   }
   #educationn .tab-pane {
     padding-top: 20px;
   }
 }
+/* 
+
+.edu::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+#about .aboutcontent::after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  right: -12.5px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(90deg);
+    transform: scale(0.7);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    padding: 0px 30px;
+  }
+} */

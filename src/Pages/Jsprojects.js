@@ -1,10 +1,35 @@
 import React from "react";
 import "./Jsprojects.css";
-import ProjectData from "../Data/Jsprojects.json";
 import githubImg from "../assets/img/github.png";
-import pf1 from "../assets/img/project1.png";
-import pf2 from "../assets/img/project2.png";
-import pf3 from "../assets/img/project3.png";
+import pf3 from "../assets/img/netflix.png"; // Assuming you have this image
+// import netflixImg from "../assets/img/netflix.png"; // Import the image
+import quiz from "../assets/img/quiz.png";
+import visit from "../assets/img/evisit.jpeg";
+import bhopal from "../assets/img/bhopal.png";
+import rubiks from "../assets/img/rubiks.png";
+
+const ProjectData = [
+  {
+    id: 1,
+    ph: visit, // Use the imported ph module
+    codelink: "https://github.com/Meghhanaa/E-VISITORSHUB.git",
+  },
+  {
+    id: 2,
+    ph: quiz, // Use the imported ph module
+    codelink: "https://github.com/Meghhanaa/Quizlet.git",
+  },
+  {
+    id: 3,
+    ph: bhopal, // Use the imported ph module
+    codelink: "https://github.com/Meghhanaa/BHOPAL_PROJECT.git",
+  },
+  {
+    id: 4,
+    ph: rubiks, // Use the imported ph module
+    codelink: "https://github.com/Meghhanaa/RUBIKS.git",
+  }
+];
 
 const Jsprojects = () => {
   return (
@@ -12,102 +37,46 @@ const Jsprojects = () => {
       <div className="container">
         <div className="row">
           <div className="col-sm-10 offset-sm-1">
-            <h2>Projects</h2>
+            <h2 className="megh-name">Projects</h2>
             <br />
-            <div className="row">
+            <div className="row megh-data">
               {ProjectData.map((project, i) => (
-                <div className="col-sm-6" key={i}>
-                  <iframe
-                    width="100%"
-                    height="300"
-                    src={project.projectlink}
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                <div className="col-sm-6 deek" key={i}>
+                  <img src={project.ph} alt="My Image" className="img-js" />
                   <br />
                   <a
-                    href={project.codelink}
+                    href={project.codelink} // Use the codelink property
                     className="btn btn-default d-block github"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Github Code <img src={githubImg} alt={i} />
+                    Github Code <img src={githubImg} alt="GitHub" />
                   </a>
                 </div>
               ))}
             </div>
             <br />
-            <h2>Dashboard | React JS </h2>
-            <p>
-              Local Storage / Chart JS / ApexCharts / Product Management / User
-              Management / Array methods / Filters / Javascript Events / Browser
-              APIs
-            </p>
+            <h2 className="megh-name">Dashboard | React JS</h2>
+            <p className="megh-p">Created a Complete Responsive React Application</p>
             <br />
             <div className="js">
               <div className="row">
                 <div className="col-sm-6">
-                  <a
-                    href="https://poojagarva28.github.io/React-Final/"
-                    target="_blank"
-                  >
-                    <img src={pf3} alt="Ecommerce Small Project" />
-                  </a>
+                  {/* Uncomment the following lines if needed */}
+                  <img src={pf3} alt="NetFlix Clone Project"  className="img-js" />
                   <br />
                   <a
-                    href="https://github.com/poojagarva28/React-Final"
+                    href="https://github.com/Meghhanaa/Netflix-clone.git"
                     className="btn btn-default d-block github"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Github Code <img src={githubImg} />
+                    Github Code <img src={githubImg} alt="GitHub" />
                   </a>
                 </div>
               </div>
             </div>
             <br />
-            <h2>DOM Manipulation | Javascript </h2>
-            <p>
-              Local Storage / Array methods / Filters / Javascript Events / HTML
-              Forms window Object / Browser APIs
-            </p>
-            <br />
-            <div className="js">
-              <div className="row">
-                <div className="col-sm-6">
-                  <a href="https://shoplane-by-pooja.glitch.me" target="_blank">
-                    <img src={pf1} alt="Ecommerce Small Project" />
-                  </a>
-                  <br />
-                  <a
-                    href="https://github.com/poojagarva28/shoplane"
-                    className="btn btn-default d-block github"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github Code <img src={githubImg} />
-                  </a>
-                </div>
-                <div className="col-sm-6">
-                  <a
-                    href="https://poojagarva28.github.io/project/"
-                    target="_blank"
-                  >
-                    <img src={pf2} alt="Ecommerce Small Project" />
-                  </a>
-                  <a
-                    href="https://github.com/poojagarva28/project"
-                    className="btn btn-default d-block github"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Github Code <img src={githubImg} />
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -116,3 +85,113 @@ const Jsprojects = () => {
 };
 
 export default Jsprojects;
+
+
+// import React from "react";
+// import "./Jsprojects.css";
+// import ProjectData from "../Data/Jsprojects.json";
+// import githubImg from "../assets/img/github.png";
+// import pf3 from "../assets/img/netflix.png";
+
+// const Jsprojects = () => {
+//   return (
+//     <div className="jsprojects">
+//       <div className="container">
+//         <div className="row">
+//           <div className="col-sm-10 offset-sm-1">
+//             <h2 className="megh-name">Projects</h2>
+//             <br />
+//             <div className="row">
+//               {ProjectData.map((project, i) => (
+//                 <div className="col-sm-6" key={i}>
+//                   <img src={project.projectlink} alt="My Image" width="100%" />
+//                   <br />
+//                   <a
+//                     href={project.codelink}
+//                     className="btn btn-default d-block github"
+//                     target="_blank"
+//                     rel="noreferrer"
+//                   >
+//                     Github Code <img src={githubImg} alt={i} />
+//                   </a>
+//                 </div>
+//               ))}
+//             </div>
+//             <br />
+//             <h2 className="megh-name">Dashboard | React JS </h2>
+//             <p className="megh-p">
+//               Created a Complete Respnsive React Application
+//             </p>
+//             <br />
+//             <div className="js">
+//               <div className="row">
+//                 <div className="col-sm-6">
+//                   {/* <a
+//                     href="https://poojagarva28.github.io/React-Final/"
+//                     target="_blank"
+//                   > */}
+//                     <img src={pf3} alt="NetFlix Clone Project" />
+//                   {/* </a> */}
+//                   <br />
+//                   <a
+//                     href="https://github.com/Meghhanaa/Netflix-clone.git"
+//                     className="btn btn-default d-block github"
+//                     target="_blank"
+//                     rel="noreferrer"
+//                   >
+//                     Github Code <img src={githubImg} />
+//                   </a>
+//                 </div>
+//               </div>
+//             </div>
+//             <br />
+//             {/* <h2 className="megh-name">DOM Manipulation | Javascript </h2>
+//             <p className="megh-p">
+//               Local Storage / Array methods / Filters / Javascript Events / HTML
+//               Forms window Object / Browser APIs
+//             </p>
+//             <br /> */}
+//             {/* <div className="js">
+//               <div className="row">
+//                 <div className="col-sm-6">
+//                   <a href="https://shoplane-by-pooja.glitch.me" target="_blank">
+//                     <img src={pf1} alt="Ecommerce Small Project" />
+//                   </a>
+//                   <br />
+//                   <a
+//                     href="https://github.com/poojagarva28/shoplane"
+//                     className="btn btn-default d-block github"
+//                     target="_blank"
+//                     rel="noreferrer"
+//                   >
+//                     Github Code <img src={githubImg} />
+//                   </a>
+//                 </div>
+//                 <div className="col-sm-6">
+//                   <a
+//                     href="https://poojagarva28.github.io/project/"
+//                     target="_blank"
+//                   >
+//                     <img src={pf2} alt="Ecommerce Small Project" />
+//                   </a>
+//                   <a
+//                     href="https://github.com/poojagarva28/project"
+//                     className="btn btn-default d-block github"
+//                     target="_blank"
+//                     rel="noreferrer"
+//                   >
+//                     Github Code <img src={githubImg} />
+//                   </a>
+//                 </div>
+//               </div>
+//             </div> */}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Jsprojects;
+
+

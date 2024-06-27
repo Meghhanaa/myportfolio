@@ -8,15 +8,9 @@ const About = () => {
         <div className="row">
           <div className="col-sm-11 offset-sm-1">
             <div className="aboutcontent">
-              <h2>About Me</h2>
+              <h2 className="megh-name">About Me</h2>
               <p>
-                I'm a Front End Developer & Graphics Designer. I love to solve
-                design problems, develop new features and design prototypes
-                using different mediums. My work is mainly focused on
-                frontend-development. As for graphic designs, my work mainly
-                involves photo manipulation. Besides, I also like doing
-                photography and videography, where I can express my creative
-                thought process.
+              “Passionate about web development and aspiring to become a skilled full stack web developer. Proficient in front-end technologies like React and Scss, and currently learning back-end development with Node.js and Express.js As well as Databases like MySQL. With a keen interest in AI and Machine Learning, I am dedicated to integrating advanced technologies into web solutions. Additionally, I am committed to mastering Java for logical programming and data structures & algorithms. My journey in tech is fueled by continuous learning and a drive to grow in the field of web development.”
               </p>
             </div>
           </div>

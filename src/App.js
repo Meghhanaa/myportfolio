@@ -13,7 +13,8 @@ import { useEffect } from "react";
 import React, { Route, Routes } from "react-router-dom";
 import PageNotFound from "./Pages/PageNotFound";
 import Jsprojects from "./Pages/Jsprojects";
-import Learn from "./common/Learn";
+// import Learn from "./common/Learn";
+import Banner from "./Banner/Banner";
 
 function App() {
   useEffect(() => {
@@ -23,16 +24,11 @@ function App() {
   return (
     <div>
       <Nav />
-      <Learn />
-      {/* <Home/>
-      <About />
-      <Services/>s
-      <Education/>
-      <Work/>
-      <Contact/> */}
+      {/* <Learn /> */}
       <Routes>
-        <Route exact="true" path="/myportfolio" element={<Home />}></Route>
-        <Route path="/myportfolio" element={<Home />}></Route>
+        <Route exact="true" path="/myportfolio" element={<Banner />}></Route>
+        {/* <Route exact="true" path="/myportfolio" element={<Home />}></Route> */}
+        {/* <Route path="/myportfolio" element={<Home />}></Route> */}
         <Route path="/about" element={<About />}></Route>
         <Route path="/services" element={<Services />}></Route>
         <Route path="/work" element={<Work />}></Route>

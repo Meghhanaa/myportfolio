@@ -1,8 +1,29 @@
 #about {
+  /* background-color: #211e1e; */
   height: 100vh;
+  background: url("../assets/img/wall-sleek.webp") no-repeat center center fixed, 
+              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  background-size: cover, 100px 100px;
+  animation: moveSlant 20s linear infinite;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
+
+@keyframes moveSlant {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 #about .aboutcontent {
-  border: 2px dashed #000;
+  color: #fff;
+  border: 2px dashed #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,8 +33,17 @@
   text-align: center;
   padding: 20px;
   position: relative;
-  background-color: #fff;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(25px);
+  /* background-color: #af0236; */
+} 
+
+.megh-name{
+  color: #af0236;
+  text-shadow: 2px 2px 4px #000, /* White shadow */
+               -2px -2px 4px #ccc;
 }
+
 #about .aboutcontent::before {
   content: "";
   position: absolute;
@@ -21,7 +51,7 @@
   left: -25px;
   width: 50px;
   height: 50px;
-  background-color: #000;
+  background-color: #fff;
   animation: rotate 3s ease infinite;
 }
 #about .aboutcontent::after {
@@ -31,7 +61,7 @@
   right: -12.5px;
   width: 25px;
   height: 25px;
-  background-color: #000;
+  background-color: #fff;
   animation: rotate 3s ease infinite;
 }
 @keyframes rotate {
@@ -52,6 +82,9 @@
 
 @media (max-width: 767px) {
   #about {
+    height: 140vh;
     padding: 0px 30px;
   }
 }
+
+

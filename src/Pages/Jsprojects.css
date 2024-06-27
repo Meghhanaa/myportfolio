@@ -2,11 +2,53 @@
   height: 100vh;
   padding: 15vh 0px;
   overflow-y: scroll;
+  background: url("../assets/img/wall-sleek.webp") no-repeat center center fixed, 
+              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  background-size: cover, 100px 100px;
+  animation: moveSlant 20s linear infinite;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
-.jsprojects iframe {
-  margin-bottom: 7px;
+
+@keyframes moveSlant {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
+
+.deek{
+  width: 200px;
+}
+.megh-name{
+  color: #af0236;
+  text-shadow: 2px 2px 4px #000, /* White shadow */
+               -2px -2px 4px #ccc;
+}
+
+.btn{
+  background-color: #fff;
+}
+
+.megh-p{
+  color: #fff;
+}
+.btn:hover {
+  background-color: #af0236  !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.6) !important; /* Shadow effect */
+  transform: translateY(-3px); /* Slight lift */
+}
+
+
 .jsprojects a.github {
+  margin-top: 10px;
   margin-bottom: 35px;
 }
 .jsprojects a.github img {
@@ -21,4 +63,39 @@
 .jsprojects .js img {
   width: 100%;
   margin-bottom: 20px;
+}
+
+.img-js{
+  width: 525px;
+  height: 300px;
+}
+
+@media (max-width: 610px){ 
+  .img-js{
+    width: 486px;
+    height: 230px;
+  }
+
+  .btn:hover {
+    background-color: #af0236  !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.6) !important; /* Shadow effect */
+    transform: translateY(-3px); /* Slight lift */
+  }
+}
+
+@media (max-width: 576px){ 
+  .img-js{
+    width: 93.5vw;
+    height: 28vh;
+  }
+
+  .btn:hover {
+    background-color: #af0236  !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.6) !important; /* Shadow effect */
+    transform: translateY(-3px); /* Slight lift */
+  }
 }

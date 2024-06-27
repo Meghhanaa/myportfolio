@@ -1,0 +1,300 @@
+/* Home.css */
+
+/* Banner section */
+.banner-section {
+    overflow: scroll;
+    height: 100%;
+    margin: 0;
+    /* padding: 0; */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #f8f8f8; */
+  }
+
+ 
+  
+  /* Left banner content */
+  .left-banner {
+    margin: 200px;
+    flex: 1;
+    /* border: 2px dashed #fff; */
+    padding: 20px;
+    /* margin-right: 20px; */
+  }
+
+  .banner-subtitle {
+    color: aquamarine;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .banner-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .name-highlight {
+    color: #ff014f;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #000, /* White shadow */
+               -2px -2px 4px #ccc;
+
+  }
+  
+  .banner-role {
+    font-size: 24px;
+    font-weight: bold;
+    color: aquamarine;
+  }
+  
+  .typewriter-text {
+    color: #ff014f;
+    text-shadow: 2px 2px 4px #000, /* White shadow */
+               -2px -2px 4px #ccc;
+  }
+  
+  .banner-description {
+    color: #fff;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  
+  /* Right banner image */
+  .right-banner {
+    margin: 80px;
+    /* min-height: 82vh; */
+    flex: 1;
+    position: relative;
+    border: 2px dashed #fff;
+  }
+
+  .right-banner::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    animation: rotate 3s ease infinite;
+  }
+  .right-banner::after {
+    content: "";
+    position: absolute;
+    bottom: -12.5px;
+    right: -12.5px;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    animation: rotate 3s ease infinite;
+  }
+  @keyframes rotate {
+    25% {
+      transform: rotate(90deg);
+      transform: scale(0.7);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .banner-image {
+    margin-top: 65px;
+    margin-left: 60px;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 25px 0 rgba(255, 255, 255, 0.6);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to right, #1e2024, #202327);
+    opacity: 0.8;
+    z-index: -1;
+  }
+
+  .megh-items{
+    margin: 20px;
+    /* padding: 10px; */
+    margin-left: 140px;
+  }
+
+  .btn-1{
+    color: #fff;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: 0 0 10px 0 rgba(175, 2, 54, 1) !important; /* Shadow effect */
+    /* transform: translateY(-3px); Slight lift */
+  }
+
+  .btn-1:hover {
+    background-color: #af0236  !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.6) !important; /* Shadow effect */
+    transform: translateY(-3px) !important;  /* Slight lift */
+  }
+
+  /* Social and skills icons */
+  .social-icons,
+  .skills-icons {
+    padding: 10px;
+  }
+  
+  .social-icons a,
+  .skills-icons a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .social-icons a:hover,
+  .skills-icons a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .skill-icon,
+  .social-icon {
+    border: 1px solid white;
+    background-color: #af0236;
+    width: 45px; 
+    height: 45px; 
+    display: inline-flex; 
+    align-items: center;  
+    justify-content: center;  
+    margin-right: 10px;
+    color: #fff;
+    font-size: 28px; /* Adjust icon size */
+  }
+  
+  .skill-icon:hover,
+  .social-icon:hover {
+    cursor: pointer;
+    background-color: #202327;
+    color: #fff !important;
+    border-color: #fff !important;
+    /* border-radius: 18%; */
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.6) !important; /* Shadow effect */
+    transform: translateY(-3px);
+  }
+  
+
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .banner-title {
+        font-size: 28px;
+    }
+
+    .banner-role {
+        font-size: 20px;
+    }
+
+    .banner-description {
+        font-size: 12px;
+    }
+
+    .right-banner{
+        height: 80px;
+    }
+
+    .banner-image {
+        max-width: 300px;
+    }
+
+    
+
+    .left-banner,
+    .right-banner {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-title {
+        font-size: 24px;
+    }
+
+    .banner-role {
+        font-size: 18px;
+    }
+
+    .banner-description {
+        font-size: 10px;
+    }
+
+    .right-banner{
+        height: 80px;
+    }
+
+    .banner-image {
+        max-width: 250px;
+    }
+
+    .left-banner,
+    .right-banner {
+        margin: 20px;
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-section {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .banner-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .banner-role {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .right-banner{
+        height: 80px;
+    }
+
+    .overlay{
+        height: 402px;
+        width: 100%;
+    }
+
+    .banner-description {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .banner-image {
+        max-width: 200px;
+    }
+
+    .btn-1{
+        /* padding-right: -80px; */
+        margin-left: -60px;
+        margin-right: 40px;
+    }
+
+    .left-banner,
+    .right-banner {
+        margin: 10px 0;
+        flex: 0 0 100%;
+    }
+}

@@ -1,11 +1,10 @@
-/* home.css */
+home.css
 
 #home {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   background: url("../assets/img/wall-sleek.webp") no-repeat center center fixed, 
               linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
               linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
@@ -61,13 +60,6 @@
   top: 50px;
   border-radius: 5px;
 }
-
-.imgsec img {
-  border-radius: 50%; /* Make image circular */
-  max-width: 100%;
-  height: auto;
-}
-
 #home .imgsec .bgblack {
   background-color: #af0236;
   position: absolute;

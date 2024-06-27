@@ -1,13 +1,76 @@
 #services {
-  height: 100vh;
+  /* background-color: #211e1e; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: url("../assets/img/wall-sleek.webp") no-repeat center center fixed, 
+              linear-gradient(135deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, rgba(255,255,255,0.1) 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+              linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+  background-size: cover, 100px 100px;
+  animation: moveSlant 20s linear infinite;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); 
+  
 }
+
+@keyframes moveSlant {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.megh-name{
+  color: #fff;
+  text-shadow: 2px 2px 4px #af0236, /* White shadow */
+               -2px -2px 4px #ccc;
+}
+
+/* .deeksha ::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+.deeksha ::after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  right: -12.5px;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  animation: rotate 3s ease infinite;
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(90deg);
+    transform: scale(0.7);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
 #services .servicebox {
   text-align: center;
-  background-color: #000;
+  background-color: #af0236;
   border-radius: 20px;
   padding: 30px 5px 40px;
   transition: 0.4s linear;
@@ -22,20 +85,41 @@
   width: 30%;
   margin: 30px 0px;
 }
+
+#services img :hover {
+  filter: brightness(0) invert(1);
+  /* width: 30%;
+  margin: 30px 0px; */
+}
 #services .servicebox:hover {
+  /* color: #000; */
+  cursor: pointer;
+  /* filter: brightness(0) invert(1); */
   background-color: #fff;
-  border: 5px double #000;
+  border: 5px double #af0236;
   transform: scale(1.02);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(25px);
 }
 #services .servicebox:hover h4 {
   color: #000;
 }
 #services .servicebox:hover img {
+  color: #fff;
   filter: none;
 }
 
 @media (max-width: 767px) {
   #services {
-    padding-top: 640px;
+    margin: 0;
+    padding-top: 90px;
   }
 }
+
+@media (max-width: 989px) {
+  #services {
+    margin: 0;
+    padding-top: 90px;
+  }
+}
+

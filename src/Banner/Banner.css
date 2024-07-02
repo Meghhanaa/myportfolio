@@ -62,7 +62,8 @@
   
   /* Right banner image */
   .right-banner {
-    margin: 80px;
+    margin: 85px;
+    height: 82vh;
     /* min-height: 82vh; */
     flex: 1;
     position: relative;
